@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mradithyan_motionintern_week_3/widget/bottom_nav_bar.dart';
-import 'package:mradithyan_motionintern_week_3/widget/genre_card.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/bottom_nav_bar.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/genre_card.dart';
 
 class Search extends StatelessWidget {
   const Search({super.key});
@@ -82,48 +82,41 @@ class Search extends StatelessWidget {
                 child: Column(children: [
                   Row(
                     children: [
-                      GenreCard(genreColor: Colors.red, genreText: "Rock"),
+                      GenreCard(genreText: "Rock"),
                       SizedBox(width: 10),
-                      GenreCard(
-                          genreColor: Colors.lightBlue, genreText: 'Pesta')
+                      GenreCard(genreText: 'Pesta')
                     ],
                   ),
                   SizedBox(height: 10),
                   Row(
                     children: [
-                      GenreCard(
-                          genreColor: Color.fromARGB(255, 38, 104, 0),
-                          genreText: "Religi"),
+                      GenreCard(genreText: "Religi"),
                       SizedBox(width: 10),
-                      GenreCard(
-                          genreColor: Colors.lightGreen, genreText: 'Podcast')
+                      GenreCard(genreText: 'Rilis Baru')
                     ],
                   ),
                   SizedBox(height: 10),
                   Row(
                     children: [
-                      GenreCard(genreColor: Colors.purple, genreText: "Pop"),
+                      GenreCard(genreText: "K-Pop"),
                       SizedBox(width: 10),
-                      GenreCard(
-                          genreColor: Colors.lightGreen, genreText: 'Podcast')
+                      GenreCard(genreText: 'Indie')
                     ],
                   ),
                   SizedBox(height: 10),
                   Row(
                     children: [
-                      GenreCard(genreColor: Colors.purple, genreText: "Pop"),
+                      GenreCard(genreText: "Tidur"),
                       SizedBox(width: 10),
-                      GenreCard(
-                          genreColor: Colors.lightGreen, genreText: 'Podcast')
+                      GenreCard(genreText: 'Metal')
                     ],
                   ),
                   SizedBox(height: 10),
                   Row(
                     children: [
-                      GenreCard(genreColor: Colors.purple, genreText: "Pop"),
+                      GenreCard(genreText: "Trending"),
                       SizedBox(width: 10),
-                      GenreCard(
-                          genreColor: Colors.lightGreen, genreText: 'Podcast')
+                      GenreCard(genreText: 'Klasik')
                     ],
                   ),
                 ]),

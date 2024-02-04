@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:mradithyan_motionintern_week_3/widget/bottom_nav_bar.dart';
-import 'package:mradithyan_motionintern_week_3/widget/mini_playlist_card.dart';
-import 'package:mradithyan_motionintern_week_3/widget/playlist_card.dart';
-import 'package:mradithyan_motionintern_week_3/widget/unselected_rounded_button.dart';
-import 'package:mradithyan_motionintern_week_3/widget/selected_rounded_button.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/bottom_nav_bar.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/mini_playlist_card.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/playlist_card.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/unselected_rounded_button.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/selected_rounded_button.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -47,30 +47,30 @@ class Home extends StatelessWidget {
                           children: [
                             MiniPlaylistCard(
                                 imageCard: 'assets/images/imgCard4.jpeg',
-                                textLabel: 'Driving'),
+                                textLabel: 'Musik buat berak'),
                             MiniPlaylistCard(
-                                imageCard: 'assets/images/imgCard2.jpg',
-                                textLabel: 'Merenung')
+                                imageCard: 'assets/images/liked.jpg',
+                                textLabel: 'Lagu yang Disukai')
                           ],
                         ),
                         Row(
                           children: [
                             MiniPlaylistCard(
-                                imageCard: 'assets/images/imgCard1.jpg',
-                                textLabel: 'Pop'),
+                                imageCard: 'assets/images/thisis.jpg',
+                                textLabel: 'This is Eminem'),
                             MiniPlaylistCard(
                                 imageCard: 'assets/images/ProfilePict.jpg',
-                                textLabel: 'Progressive Rock')
+                                textLabel: 'Lorem')
                           ],
                         ),
                         Row(
                           children: [
                             MiniPlaylistCard(
                                 imageCard: 'assets/images/ProfilePict.jpg',
-                                textLabel: 'Queen'),
+                                textLabel: 'Lorem'),
                             MiniPlaylistCard(
                                 imageCard: 'assets/images/ProfilePict.jpg',
-                                textLabel: 'Dewa Radio')
+                                textLabel: 'Lorem')
                           ],
                         )
                       ],
@@ -117,37 +117,13 @@ class Home extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: [
                         PlaylistCard(),
-                        PlaylistCard(),
-                        PlaylistCard(),
-                        PlaylistCard()
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      'Baru Diputar',
-                      style: TextStyle(
-                          color: Colors.white,
-                          height: 1.1,
-                          fontSize: 23,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Container(
-                    height: 200,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        PlaylistCard(),
-                        PlaylistCard(),
+                        PlaylistCard(cardType: "Artist"),
                         PlaylistCard(),
                         PlaylistCard()
                       ],
                     ),
                   ),
+                  SizedBox(height: 10)
                 ],
               ),
             ),

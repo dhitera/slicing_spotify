@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class GenreCard extends StatelessWidget {
   const GenreCard({
-    required this.genreColor,
     required this.genreText,
     super.key,
   });
 
-  final Color genreColor;
   final String genreText;
 
   @override
   Widget build(BuildContext context) {
+    final randomColor = Color.fromRGBO(
+      Random().nextInt(256),
+      Random().nextInt(256),
+      Random().nextInt(256),
+      1.0,
+    );
+
     return Expanded(
         child: Container(
       width: 100,
       height: 100,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.0),
-        color: genreColor,
+        color: randomColor,
       ),
       child: Stack(
         children: [
@@ -42,7 +48,7 @@ class GenreCard extends StatelessWidget {
                 child: Container(
                   width: 80,
                   child: Image.asset(
-                    'assets/images/imgCard1.jpg',
+                    'assets/images/thisis.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),

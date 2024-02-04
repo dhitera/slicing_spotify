@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mradithyan_motionintern_week_3/pages/collection.dart';
 import 'package:mradithyan_motionintern_week_3/pages/home.dart';
 import 'package:mradithyan_motionintern_week_3/pages/search.dart';
-import 'package:mradithyan_motionintern_week_3/widget/bottom_nav_bar.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/bottom_nav_bar.dart';
 
 void main() {
   runApp(const MyApp());

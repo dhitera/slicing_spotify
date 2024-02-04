@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:mradithyan_motionintern_week_3/widget/bottom_nav_bar.dart';
-import 'package:mradithyan_motionintern_week_3/widget/collection_item.dart';
-import 'package:mradithyan_motionintern_week_3/widget/unselected_rounded_button.dart';
+import 'package:mradithyan_motionintern_week_3/models/collection_model.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/bottom_nav_bar.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/collection_item.dart';
+import 'package:mradithyan_motionintern_week_3/widgets/unselected_rounded_button.dart';
 
 class Collection extends StatelessWidget {
-  const Collection({super.key});
+  Collection({super.key});
+
+  List<CollectionModel> collection = [];
+
+  void _getCollection() {
+    collection = CollectionModel.getCollection();
+  }
 
   @override
   Widget build(BuildContext context) {
+    _getCollection();
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(
@@ -106,9 +114,13 @@ class Collection extends StatelessWidget {
                       ListView.builder(
                           physics: ScrollPhysics(),
                           shrinkWrap: true,
-                          itemCount: 10,
+                          itemCount: collection.length,
                           itemBuilder: (context, index) {
-                            return CollectionItem();
+                            return CollectionItem(
+                                name: collection[index].name,
+                                cardType: collection[index].cardType,
+                                imgPath: collection[index].imgPath,
+                                cardMaker: collection[index].cardMaker);
                           })
                     ],
                   ),
